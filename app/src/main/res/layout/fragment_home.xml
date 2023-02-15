@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    tools:context=".fragments.BottomBar.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card_layout"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="52dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/background_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <LinearLayout
+                    android:id="@+id/ID_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="8dp"
+                        android:text="ID:"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txtID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0112233"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold|italic" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/status_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ID_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="8dp"
+                        android:text="Статус"
+                        android:textColor="#E91E63"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/txtStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Бронза"
+                        android:textColor="#E91E63"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/txtPoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="8dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="point"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="240dp"
+                android:layout_height="20dp"
+                android:background="@drawable/background_bottom_card"
+                app:layout_constraintEnd_toEndOf="@id/card_layout"
+                app:layout_constraintStart_toStartOf="@id/card_layout"
+                app:layout_constraintTop_toBottomOf="@id/card_layout" />
+
+            <ImageView
+                android:layout_width="240dp"
+                android:layout_height="20dp"
+                android:background="@drawable/background_bottom_card"
+                android:rotation="180"
+                app:layout_constraintBottom_toTopOf="@id/card_layout"
+                app:layout_constraintEnd_toEndOf="@id/card_layout"
+                app:layout_constraintStart_toStartOf="@id/card_layout" />
+            <TextView
+                android:id="@+id/txtView0"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#E77A7878"
+                app:layout_constraintTop_toBottomOf="@id/card_layout"
+                android:layout_marginTop="30dp"/>
+
+            <ScrollView
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_24"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="@dimen/dimen_24"
+                app:layout_constraintStart_toStartOf="@+id/card_layout"
+                app:layout_constraintTop_toBottomOf="@id/card_layout">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/bonus_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="110dp"
+                        android:background="@drawable/edit_background"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="107dp"
+                            android:layout_height="107dp"
+                            android:layout_gravity="center"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/gift_box"
+                            app:lottie_repeatCount="10000000" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Бонусы"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtView"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#e7e7e7e7" />
+
+                            <TextView
+                                android:layout_width="235dp"
+                                android:layout_height="wrap_content"
+                                android:text="Прветствую вас в раздел бонусы, доступные бонусы: 24ч, 12ч.\n Не забудьте получать бонус."
+                                android:textSize="@dimen/dimen_12" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:gravity="end"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="25dp"
+                                    android:background="@drawable/background_button3"
+                                    android:text="Перейти"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/task_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/edit_background"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toEndOf="@id/bonus_layout"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="107dp"
+                            android:layout_height="107dp"
+                            android:layout_gravity="center"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/task_clipboard"
+                            app:lottie_repeatCount="10000000" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Задание"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtView2"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#e7e7e7e7" />
+
+                            <TextView
+                                android:layout_width="235dp"
+                                android:layout_height="wrap_content"
+                                android:text="В разделе задание вы зарабатываете за каждые выполненние задание.\n Не забудьте выполнить задание."
+                                android:textSize="@dimen/dimen_12" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginEnd="10dp"
+                                android:gravity="end"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="25dp"
+                                    android:background="@drawable/background_button3"
+                                    android:text="Перейти"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/advert_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/edit_background"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/task_layout"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="107dp"
+                            android:layout_height="107dp"
+                            android:layout_gravity="center"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/video_advertising"
+                            app:lottie_repeatCount="10000000" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Реклама"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtView3"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#e7e7e7e7" />
+
+                            <TextView
+                                android:layout_width="235dp"
+                                android:layout_height="wrap_content"
+                                android:text="В разделе рекламб вы зарабатываете за просмотр реклам.\n Различные рекламы на ваш выбор."
+                                android:textSize="@dimen/dimen_12" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:gravity="end"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="25dp"
+                                    android:background="@drawable/background_button3"
+                                    android:text="Перейти"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/spin_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/edit_background"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/task_layout"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="107dp"
+                            android:layout_height="107dp"
+                            android:layout_gravity="center"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/video_advertising"
+                            app:lottie_repeatCount="10000000" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Колесо"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtView4"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#e7e7e7e7" />
+
+                            <TextView
+                                android:layout_width="235dp"
+                                android:layout_height="wrap_content"
+                                android:text="В можете крутить колесо каждые день и можете крутить за рекламу .\n Различные рекламы на ваш выбор."
+                                android:textSize="@dimen/dimen_12" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:gravity="end"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="25dp"
+                                    android:background="@drawable/background_button3"
+                                    android:text="Перейти"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </ScrollView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

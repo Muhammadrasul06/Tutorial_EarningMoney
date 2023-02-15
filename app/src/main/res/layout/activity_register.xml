@@ -150,26 +150,32 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="У вас уже есть учетная запись?"
-                android:textAlignment="center"
-                android:textColor="#2f3363"
-                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                    android:layout_marginTop="24dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnLogIn"
-                android:textAllCaps="false"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
-                android:background="@drawable/buttom_background_1"
-                android:text="Войти"
-                android:textSize="18dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="У вас уже есть учетная запись?   "
+                    android:textAlignment="center"
+                    android:textColor="#2f3363"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btnLogIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Войти"
+                    android:textAlignment="center"
+                    android:textColor="#0013FA"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 

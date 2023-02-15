@@ -74,10 +74,11 @@
                 android:background="@drawable/edit_background"
                 android:ems="10"
                 android:hint="Введите свой адрес эл-почты"
-                android:inputType="textEmailAddress"
+                android:inputType="textWebEmailAddress"
                 android:padding="10dp"
                 android:textColor="#A2A4b5"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:autofillHints="emailAddress" />
 
             <TextView
                 android:id="@+id/txtPassword"
@@ -100,13 +101,13 @@
                 android:background="@drawable/edit_background"
                 android:ems="10"
                 android:hint="Введите свой пароль"
-                android:inputType="textPassword"
+                android:inputType="textWebPassword"
                 android:padding="10dp"
                 android:textColor="#A2A4b5"
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/forgot_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -128,6 +129,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/google" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/twitter" />
 
                 <ImageView
                     android:id="@+id/imgFacebook"
@@ -154,26 +162,30 @@
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
+            <LinearLayout
+                android:layout_marginTop="24dp"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_height="match_parent">
+
             <TextView
+                android:id="@+id/btnRegister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="У вас нет учетной записи?"
+                android:text="У вас нет учетной записи?   "
                 android:textAlignment="center"
                 android:textColor="#2f3363"
                 android:textStyle="bold" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnRegister"
+                <TextView
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
-                android:background="@drawable/buttom_background_1"
-                android:text=" Зарегистрироваться"
-                android:textAllCaps="false"
-                android:textSize="18dp" />
+                android:layout_height="wrap_content"
+                android:text="Зарегистрироваться"
+                android:textAlignment="center"
+                android:textColor="#0411FF"
+                android:textStyle="bold" />
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 

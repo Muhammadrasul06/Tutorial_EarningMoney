@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.example.Tutorial_Earningmoney.fragments.BottomBar.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_fragment_to_bonusFragment"
+            app:destination="@id/bonusFragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_taskFragment"
+            app:destination="@id/taskFragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_advertFragment"
+            app:destination="@id/advertFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mining_fragment"
+        android:name="com.example.Tutorial_Earningmoney.fragments.BottomBar.MiningFragment"
+        android:label="fragment_mining"
+        tools:layout="@layout/fragment_mining" >
+        <action
+            android:id="@+id/action_mining_fragment_to_shopFragment"
+            app:destination="@id/shopFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wallet_fragment"
+        android:name="com.example.Tutorial_Earningmoney.fragments.BottomBar.WithdrawalFragment"
+        android:label="fragment_withdrawal"
+        tools:layout="@layout/fragment_withdrawal" >
+        <action
+            android:id="@+id/action_wallet_fragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings_fragment"
+        android:name="com.example.Tutorial_Earningmoney.fragments.BottomBar.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settings_fragment_to_shopFragment"
+            app:destination="@id/shopFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/registerActivity"
+        android:name="com.example.Tutorial_Earningmoney.LoginUI.RegisterActivity"
+        android:label="activity_register"
+        tools:layout="@layout/activity_register" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.Tutorial_Earningmoney.LoginUI.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.Tutorial_Earningmoney.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/verifyPasswordActivity"
+        android:name="com.example.Tutorial_Earningmoney.LoginUI.ForgotPassword.VerifyPasswordActivity"
+        android:label="activity_verify_password"
+        tools:layout="@layout/activity_verify_password" />
+    <activity
+        android:id="@+id/createPasswordActivity"
+        android:name="com.example.Tutorial_Earningmoney.LoginUI.ForgotPassword.CreatePasswordActivity"
+        android:label="activity_create_password"
+        tools:layout="@layout/activity_create_password" />
+    <activity
+        android:id="@+id/forgotActivity"
+        android:name="com.example.Tutorial_Earningmoney.LoginUI.ForgotPassword.ForgotActivity"
+        android:label="activity_forgot"
+        tools:layout="@layout/activity_forgot" />
+    <fragment
+        android:id="@+id/bonusFragment"
+        android:name="com.example.Tutorial_Earningmoney.fragments.HomeFunction.BonusFragment"
+        android:label="fragment_bonus"
+        tools:layout="@layout/fragment_bonus" />
+    <fragment
+        android:id="@+id/advertFragment"
+        android:name="com.example.Tutorial_Earningmoney.fragments.HomeFunction.AdvertFragment"
+        android:label="fragment_advert"
+        tools:layout="@layout/fragment_advert" />
+    <fragment
+        android:id="@+id/taskFragment"
+        android:name="com.example.Tutorial_Earningmoney.fragments.HomeFunction.TaskFragment"
+        android:label="fragment_task"
+        tools:layout="@layout/fragment_task" />
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="com.example.Tutorial_Earningmoney.fragments.Shop.ShopFragment"
+        android:label="fragment_shop"
+        tools:layout="@layout/fragment_shop" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.Tutorial_Earningmoney.fragments.History.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/aboutAppFragment"
+        android:name="com.example.Tutorial_Earningmoney.fragments.Settings.AboutAppFragment"
+        android:label="fragment_about_app"
+        tools:layout="@layout/fragment_about_app" />
+    <fragment
+        android:id="@+id/notifFragment"
+        android:name="com.example.Tutorial_Earningmoney.fragments.Settings.NotifFragment"
+        android:label="fragment_notif"
+        tools:layout="@layout/fragment_notif" />
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="com.example.Tutorial_Earningmoney.fragments.Settings.PrivacyFragment"
+        android:label="fragment_privacy"
+        tools:layout="@layout/fragment_privacy" />
+    <fragment
+        android:id="@+id/securityFragment"
+        android:name="com.example.Tutorial_Earningmoney.fragments.Settings.SecurityFragment"
+        android:label="fragment_security"
+        tools:layout="@layout/fragment_security" />
+</navigation>
